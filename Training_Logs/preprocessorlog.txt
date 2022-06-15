@@ -317,3 +317,15 @@
 2022-06-15/18:11:37		scaling for numerical values successful
 2022-06-15/18:11:37		Entered the encode_categorical_columns method of the Preprocessor class
 2022-06-15/18:11:37		Exited the encode_categorical_columns method of the Preprocessor class
+2022-06-15/19:44:09		Entered the remove_columns method of the Preprocessor class
+2022-06-15/19:44:10		Column removed Successfully
+2022-06-15/19:44:10		Entered the remove_unwanted_spaces method of the Preprocessor class
+2022-06-15/19:44:10		Unwanted spaces removal Successful.Exited the remove_unwanted_spaces method of the Preprocessor class
+2022-06-15/19:44:10		Entered the is_null_present method of the Preprocessor class
+2022-06-15/19:44:10		Finding missing values is a success
+2022-06-15/19:44:10		Entered the impute_missing_values method of the Preprocessor class
+2022-06-15/19:44:10		Imputing missing values Successful
+2022-06-15/19:44:10		Entered the scale_numerical_columns method of the Preprocessor class
+2022-06-15/19:44:11		scaling for numerical values successful
+2022-06-15/19:44:11		Entered the encode_categorical_columns method of the Preprocessor class
+2022-06-15/19:44:11		Exited the encode_categorical_columns method of the Preprocessor class
