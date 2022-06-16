@@ -185,7 +185,7 @@ git push -u origin main/git push -f origin main
 ## App link
 
 
-<a href="https://sachin24.herokuapp.com/"> Setup project </a>
+"https://sachin24.herokuapp.com/"
 
 ## Select project setting in CircleCI and below environment variable
 
