@@ -3,7 +3,7 @@
 #### Problem Statement:
     To build a classification methodology to predict the individual income based on given
     training data.
-    we need to sort out the individuals having income greate than 50 k or less than 50k.
+    we need to sort out the individuals having income greater than 50 k or less than 50k.
     
 #### Data Description
     
