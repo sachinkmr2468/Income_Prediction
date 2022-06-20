@@ -30,3 +30,7 @@
 2022-06-15/19:44:09		Data Load Successful
 2022-06-15/20:08:13		Entered the get_data method of the Data_Getter class
 2022-06-15/20:08:14		Data Load Successful
+2022-06-20/16:11:52		Entered the get_data method of the Data_Getter class
+2022-06-20/16:11:53		Data Load Successful
+2022-06-20/20:40:21		Entered the get_data method of the Data_Getter class
+2022-06-20/20:40:21		Data Load Successful

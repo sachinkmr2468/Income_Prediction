@@ -7,7 +7,7 @@ class Data_Getter_Pred:
     This class is used for obtaining the data from the source for prediction.
     """
     def __init__(self):
-        self.prediction_file=r'C:\Users\nihca\Documents\project\Training_FileFromDB\inputFilee.csv' # gives the path from where the data will be loaded
+        self.prediction_file=r'C:\Users\nihca\Documents\project\Training_FileFromDB\inputFile.csv' # gives the path from where the data will be loaded
         self.file_object = open(r'B:\project\pythonmyproject\Prediction_Logs\data_getter.txt', 'a+')
 
 

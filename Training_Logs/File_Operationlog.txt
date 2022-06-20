@@ -241,3 +241,39 @@
 2022-06-15/20:08:16		Exited the find_correct_model_file method of the Model_Finder class.
 2022-06-15/20:08:16		Entered the load_model method of the File_Operation class
 2022-06-15/20:08:16		Model File NaiveBayes2 loaded. Exited the load_model method of the Model_Finder class
+2022-06-20/16:11:54		Entered the load_model method of the File_Operation class
+2022-06-20/16:11:54		Model File KMeans loaded. Exited the load_model method of the Model_Finder class
+2022-06-20/16:11:54		Entered the find_correct_model_file method of the File_Operation class
+2022-06-20/16:11:54		Exited the find_correct_model_file method of the Model_Finder class.
+2022-06-20/16:11:54		Entered the load_model method of the File_Operation class
+2022-06-20/16:11:54		Model File XGBoost1 loaded. Exited the load_model method of the Model_Finder class
+2022-06-20/16:11:55		Entered the find_correct_model_file method of the File_Operation class
+2022-06-20/16:11:55		Exited the find_correct_model_file method of the Model_Finder class.
+2022-06-20/16:11:55		Entered the load_model method of the File_Operation class
+2022-06-20/16:11:55		Model File XGBoost3 loaded. Exited the load_model method of the Model_Finder class
+2022-06-20/16:11:55		Entered the find_correct_model_file method of the File_Operation class
+2022-06-20/16:11:55		Exited the find_correct_model_file method of the Model_Finder class.
+2022-06-20/16:11:55		Entered the load_model method of the File_Operation class
+2022-06-20/16:11:55		Model File XGBoost0 loaded. Exited the load_model method of the Model_Finder class
+2022-06-20/16:11:55		Entered the find_correct_model_file method of the File_Operation class
+2022-06-20/16:11:55		Exited the find_correct_model_file method of the Model_Finder class.
+2022-06-20/16:11:55		Entered the load_model method of the File_Operation class
+2022-06-20/16:11:55		Model File NaiveBayes2 loaded. Exited the load_model method of the Model_Finder class
+2022-06-20/20:40:23		Entered the load_model method of the File_Operation class
+2022-06-20/20:40:23		Model File KMeans loaded. Exited the load_model method of the Model_Finder class
+2022-06-20/20:40:23		Entered the find_correct_model_file method of the File_Operation class
+2022-06-20/20:40:23		Exited the find_correct_model_file method of the Model_Finder class.
+2022-06-20/20:40:23		Entered the load_model method of the File_Operation class
+2022-06-20/20:40:23		Model File XGBoost1 loaded. Exited the load_model method of the Model_Finder class
+2022-06-20/20:40:23		Entered the find_correct_model_file method of the File_Operation class
+2022-06-20/20:40:23		Exited the find_correct_model_file method of the Model_Finder class.
+2022-06-20/20:40:23		Entered the load_model method of the File_Operation class
+2022-06-20/20:40:23		Model File XGBoost3 loaded. Exited the load_model method of the Model_Finder class
+2022-06-20/20:40:24		Entered the find_correct_model_file method of the File_Operation class
+2022-06-20/20:40:24		Exited the find_correct_model_file method of the Model_Finder class.
+2022-06-20/20:40:24		Entered the load_model method of the File_Operation class
+2022-06-20/20:40:24		Model File XGBoost0 loaded. Exited the load_model method of the Model_Finder class
+2022-06-20/20:40:24		Entered the find_correct_model_file method of the File_Operation class
+2022-06-20/20:40:24		Exited the find_correct_model_file method of the Model_Finder class.
+2022-06-20/20:40:24		Entered the load_model method of the File_Operation class
+2022-06-20/20:40:24		Model File NaiveBayes2 loaded. Exited the load_model method of the Model_Finder class

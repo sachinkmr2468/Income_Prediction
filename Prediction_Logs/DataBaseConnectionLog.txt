@@ -126,3 +126,13 @@
 2022-06-15/20:07:50		connection was successful
 2022-06-15/20:08:13		connection was successful
 2022-06-15/20:08:13		data loaded to csv successfully!!
+2022-06-20/16:11:07		connection was successful
+2022-06-20/16:11:07		Tables created successfully!!
+2022-06-20/16:11:21		connection was successful
+2022-06-20/16:11:52		connection was successful
+2022-06-20/16:11:52		data loaded to csv successfully!!
+2022-06-20/20:39:48		connection was successful
+2022-06-20/20:39:48		Tables created successfully!!
+2022-06-20/20:40:00		connection was successful
+2022-06-20/20:40:21		connection was successful
+2022-06-20/20:40:21		data loaded to csv successfully!!
