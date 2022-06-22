@@ -34,4 +34,5 @@ pytest==6.2.2
 cassandra-driver
 sklearn-pandas
 imblearn==0.0
+gunicorn
 -e .
