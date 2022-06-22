@@ -115,3 +115,16 @@
 2022-06-20/23:24:32		Invalid File Name!! File moved to Bad Raw Folder :: incomeData_021119.csv
 2022-06-20/23:24:32		Valid File name!! File moved to GoodRaw Folder :: incomeData_021119910_010212.csv
 2022-06-20/23:24:32		Valid File name!! File moved to GoodRaw Folder :: incomeData_021119911_010213.csv
+2022-06-21/22:58:05		Invalid File Name!! File moved to Bad Raw Folder :: incomeData_021119.csv
+2022-06-21/22:58:05		Valid File name!! File moved to GoodRaw Folder :: incomeData_021119910_010212.csv
+2022-06-21/22:58:05		Valid File name!! File moved to GoodRaw Folder :: incomeData_021119911_010213.csv
+2022-06-21/23:11:27		Invalid File Name!! File moved to Bad Raw Folder :: incomeData_021119.csv
+2022-06-21/23:11:27		Valid File name!! File moved to GoodRaw Folder :: incomeData_021119910_010212.csv
+2022-06-21/23:11:27		Valid File name!! File moved to GoodRaw Folder :: incomeData_021119911_010213.csv
+2022-06-22/09:58:00		Invalid File Name!! File moved to Bad Raw Folder :: incomeData_021119.csv
+2022-06-22/09:58:00		Valid File name!! File moved to GoodRaw Folder :: incomeData_021119910_010212.csv
+2022-06-22/09:58:01		Valid File name!! File moved to GoodRaw Folder :: incomeData_021119911_010213.csv
+2022-06-22/10:07:56		Error occured while validating FileName [WinError 3] The system cannot find the path specified: 'pythonmyproject\\Prediction_Batch_files'
+2022-06-22/13:17:52		Invalid File Name!! File moved to Bad Raw Folder :: incomeData_021119.csv
+2022-06-22/13:17:52		Valid File name!! File moved to GoodRaw Folder :: incomeData_021119910_010212.csv
+2022-06-22/13:17:52		Valid File name!! File moved to GoodRaw Folder :: incomeData_021119911_010213.csv

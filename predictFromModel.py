@@ -12,7 +12,7 @@ ob = App_Logger()
 class prediction:
 
     def __init__(self):
-        self.file_object = open(r'B:\project\pythonmyproject\Prediction_Logs\Prediction_Logs.txt', 'a+')
+        self.file_object = open('Prediction_Logs/Prediction_Logs.txt', 'a+')
 
         self.pred_data_val = Prediction_Data_validation()
 

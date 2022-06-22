@@ -11,8 +11,8 @@ class File_Operation:
                 and load the saved model for prediction.
                 """
     def __init__(self):
-        self.file_object = open(r'B:\project\pythonmyproject\Training_Logs\File_Operationlog.txt','a+')
-        self.model_directory=r'B:/project/pythonmyproject/file_operations/models/' # give the path
+        self.file_object = open('Training_Logs/File_Operationlog.txt','a+')
+        self.model_directory='file_operations/models/' # give the path
 
     def save_model(self,model,filename): #model,filename - will be passed when this model will be called
         """

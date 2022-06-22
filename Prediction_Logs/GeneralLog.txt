@@ -151,3 +151,20 @@
 2022-06-20/23:25:07		GoodRaw directory deleted successfully!!!
 2022-06-20/23:25:07		Bad files moved to archive
 2022-06-20/23:25:07		Bad Raw Data Folder Deleted successfully!!
+2022-06-21/22:58:05		BadRaw directory deleted before starting validation!!!
+2022-06-21/22:58:42		GoodRaw directory deleted successfully!!!
+2022-06-21/22:58:42		Bad files moved to archive
+2022-06-21/22:58:42		Bad Raw Data Folder Deleted successfully!!
+2022-06-21/23:11:27		BadRaw directory deleted before starting validation!!!
+2022-06-21/23:11:59		GoodRaw directory deleted successfully!!!
+2022-06-21/23:11:59		Bad files moved to archive
+2022-06-21/23:11:59		Bad Raw Data Folder Deleted successfully!!
+2022-06-22/10:07:56		BadRaw directory deleted before starting validation!!!
+2022-06-22/10:07:56		GoodRaw directory deleted successfully!!!
+2022-06-22/12:58:40		BadRaw directory deleted before starting validation!!!
+2022-06-22/12:58:40		Error while creating Directory [WinError 183] Cannot create a file when that file already exists: 'Prediction_Raw_Files_Validated/Good_Raw/':
+2022-06-22/13:07:49		Error while creating Directory [WinError 183] Cannot create a file when that file already exists: 'Prediction_Raw_Files_Validated/Good_Raw/':
+2022-06-22/13:14:08		Error while creating Directory [WinError 183] Cannot create a file when that file already exists: 'Prediction_Raw_Files_Validated/Good_Raw/':
+2022-06-22/13:18:29		GoodRaw directory deleted successfully!!!
+2022-06-22/13:18:29		Bad files moved to archive
+2022-06-22/13:18:29		Bad Raw Data Folder Deleted successfully!!

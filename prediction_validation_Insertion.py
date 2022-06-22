@@ -10,7 +10,7 @@ class pred_validation:
         self.raw_data = Prediction_Data_validation()
         self.dataTransform = dataTransformPredict() # dataTransformPredict is a class called from module datatransformationprediction
         self.dbOperation = dbOperation()
-        self.file_object = open(r'B:\project\pythonmyproject\Prediction_Logs\Prediction_Log.txt', 'a+')
+        self.file_object = open('Prediction_Logs/Prediction_Log.txt', 'a+')
 
 
     def prediction_validation(self):

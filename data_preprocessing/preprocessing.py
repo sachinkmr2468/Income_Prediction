@@ -12,7 +12,7 @@ class Preprocessor:
         """
 
     def __init__(self):
-        self.file_object = open(r'B:\project\pythonmyproject\Training_Logs\preprocessorlog.txt', 'a+')
+        self.file_object = open('Training_Logs/preprocessorlog.txt', 'a+')
 
     def remove_unwanted_spaces(self,data): #data is passed from diff location when this method is called
         """
@@ -117,7 +117,7 @@ class Preprocessor:
                 self.dataframe_with_null = pd.DataFrame() #creating empty dataframe
                 self.dataframe_with_null['columns'] = data.columns # #addign a col name col
                 self.dataframe_with_null['missing values count'] = np.asarray(data.isna().sum()) #adding another col missing values count
-                self.dataframe_with_null.to_csv(r'B:\project\pythonmyproject\preprocessing_data\null_values.csv') # storing the null column information to file
+                self.dataframe_with_null.to_csv('preprocessing_data/null_values.csv') # storing the null column information to file
 
                 ob.log(self.file_object,'Finding missing values is a success')
 

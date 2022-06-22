@@ -41,7 +41,7 @@ class Prediction_Data_validation:
 
     def __init__(self):
 #        self.Batch_Directory = path
-        self.schema_path = r'B:\project\pythonmyproject\schema_prediction.json'
+        self.schema_path = 'schema_prediction.json'
 
 
 
@@ -63,7 +63,7 @@ class Prediction_Data_validation:
             column_names = dic['ColName']
             NumberofColumns = dic['NumberofColumns']
 
-            file = open(r'B:\project\pythonmyproject\Prediction_Logs\valuesfromSchemaValidationLog.txt', 'a+')
+            file = open('Prediction_Logs/valuesfromSchemaValidationLog.txt', 'a+')
             message ="LengthOfDateStampInFile:: %s" %LengthOfDateStampInFile + "\t" + "LengthOfTimeStampInFile:: %s" % LengthOfTimeStampInFile +"\t " + "NumberofColumns:: %s" % NumberofColumns + "\n"
             ob.log(file,message)
 
@@ -72,19 +72,19 @@ class Prediction_Data_validation:
 
 
         except ValueError:
-            file = open(r'B:\project\pythonmyproject\Prediction_Logs\valuesfromSchemaValidationLog.txt', 'a+')
+            file = open('Prediction_Logs/valuesfromSchemaValidationLog.txt', 'a+')
             ob.log(file,"ValueError:Value not found inside schema_training.json")
             file.close()
             raise ValueError
 
         except KeyError:
-            file = open(r'B:\project\pythonmyproject\Prediction_Logs\valuesfromSchemaValidationLog.txt', 'a+')
+            file = open('Prediction_Logs/valuesfromSchemaValidationLog.txt', 'a+')
             ob.log(file, "KeyError:Key value error incorrect key passed")
             file.close()
             raise KeyError
 
         except Exception as e:
-            file = open(r'B:\project\pythonmyproject\Prediction_Logs\valuesfromSchemaValidationLog.txt', 'a+')
+            file = open('Prediction_Logs/valuesfromSchemaValidationLog.txt', 'a+')
             ob.log(file, str(e))
             file.close()
             raise e
@@ -115,19 +115,21 @@ class Prediction_Data_validation:
                                         On Failure: OSError
                                                 """
         try:
-            directory = 'Good_Raw'
-            parent_dir = r'B:\project\pythonmyproject\Prediction_Raw_Files_Validated'
-            path = os.path.join(parent_dir,directory)
+#            directory = 'Good_Raw/'
+#            parent_dir = 'Prediction_Raw_Files_Validated/'
+#            path = os.path.join(parent_dir,directory)
+            path = os.path.join("Prediction_Raw_Files_Validated/", "Good_Raw/")
             if not os.path.isdir(path):
                 os.makedirs(path)
-            directory1 = 'Bad_Raw'
-            parent_dir1 = r'B:\project\pythonmyproject\Prediction_Raw_Files_Validated'
-            path = os.path.join(parent_dir1,directory1)
+#            directory1 = 'Bad_Raw/'
+#            parent_dir1 = 'Prediction_Raw_Files_Validated/'
+#            path1 = os.path.join(parent_dir1,directory1)
+            path = os.path.join("Prediction_Raw_Files_Validated/", "Bad_Raw/")
             if not os.path.isdir(path):
                 os.makedirs(path)
 
         except OSError as ex:
-            file = open(r"B:\project\pythonmyproject\Prediction_Logs\GeneralLog.txt", 'a+')
+            file = open("Prediction_Logs/GeneralLog.txt", 'a+')
             ob.log(file,"Error while creating Directory %s:" % ex)
 
             file.close()
@@ -143,20 +145,20 @@ class Prediction_Data_validation:
 
                                                     """
         try:
-            location = r'B:\project\pythonmyproject\Prediction_Raw_Files_Validated'
-            dirs = 'Good_Raw'
+            location = 'Prediction_Raw_Files_Validated/'
+            dirs = 'Good_Raw/'
             path = os.path.join(location,dirs)
             # if os.path.isdir("ids/" + userName):
             # if os.path.isdir(path + 'Bad_Raw/'):
             #     shutil.rmtree(path + 'Bad_Raw/')
             if os.path.isdir(path):
                 shutil.rmtree(path)
-                file = open(r"B:\project\pythonmyproject\Prediction_Logs\GeneralLog.txt", 'a+')
+                file = open("Prediction_Logs/GeneralLog.txt", 'a+')
                 ob.log(file,"GoodRaw directory deleted successfully!!!")
 
                 file.close()
         except OSError as s:
-            file = open(r"B:\project\pythonmyproject\Prediction_Logs\GeneralLog.txt", 'a+')
+            file = open("Prediction_Logs/GeneralLog.txt", 'a+')
             ob.log(file,"Error while Deleting Directory : %s" %s)
 
             file.close()
@@ -171,17 +173,17 @@ class Prediction_Data_validation:
                                                     """
 
         try:
-            location = r'B:\project\pythonmyproject\Prediction_Raw_Files_Validated'
-            dirs = 'Bad_Raw'
-            path = os.path.join(location,dirs)
+            location1 = 'Prediction_Raw_Files_Validated/'
+            dirs1 = 'Bad_Raw/'
+            path = os.path.join(location1,dirs1)
             if os.path.isdir(path):
                 shutil.rmtree(path)
-                file = open(r"B:\project\pythonmyproject\Prediction_Logs\GeneralLog.txt", 'a+')
+                file = open("Prediction_Logs/GeneralLog.txt", 'a+')
                 ob.log(file,"BadRaw directory deleted before starting validation!!!")
 
                 file.close()
         except OSError as s:
-            file = open(r"B:\project\pythonmyproject\Prediction_Logs\GeneralLog.txt", 'a+')
+            file = open("Prediction_Logs/GeneralLog.txt", 'a+')
             ob.log(file,"Error while Deleting Directory : %s" %s)
 
             file.close()
@@ -202,34 +204,40 @@ class Prediction_Data_validation:
         date = now.date()
         time = now.strftime("%H%M%S")
         try:
-            source = r'B:/project/pythonmyproject/Prediction_Raw_Files_Validated/Bad_Raw/'
-            directory = 'BadData''_' + str(date) + "_" + str(time)
-            dirs = 'Bad_Raw/'
-            parent_dir = (r'B:\project\pythonmyproject\PredictionArchivedBadData')
-            dest = os.path.join(parent_dir, directory)
-            if os.path.isdir(source):
-                print('Good')
-                if not os.path.isdir(parent_dir):
-                    os.makedirs(parent_dir)
-                if not os.path.isdir(dest):
-                    os.makedirs(dest)
+            path = "PredictionArchivedBadData"
+            if not os.path.isdir(path):
+                os.makedirs(path)
+            source = 'Prediction_Raw_Files_Validated/Bad_Raw/'
+            dest = 'PredictionArchivedBadData/BadData_' + str(date) + "_" + str(time)
+#            directory = 'BadData''_' + str(date) + "_" + str(time)
+#            dirs = 'Bad_Raw/'
+#            parent_dir = ('pythonmyproject/PredictionArchivedBadData')
+            if not os.path.isdir(dest):
+                os.makedirs(dest)
+#            dest = os.path.join(parent_dir, directory)
+#            if os.path.isdir(source):
+#               print('Good')
+#               if not os.path.isdir(parent_dir):
+#                   os.makedirs(parent_dir)
+#              if not os.path.isdir(dest):
+#                 os.makedirs(dest)
             filesonly = os.listdir(source)
             for f in filesonly:
                 if f not in os.listdir(dest):
-                    shutil.move(source + f, dest + f)
+                    shutil.move(source + f, dest+f)
                     print('gd to proceed')
-            file = open(r"B:\project\pythonmyproject\Prediction_Logs\GeneralLog.txt", 'a+')
+            file = open("Prediction_Logs/GeneralLog.txt", 'a+')
             ob.log(file,"Bad files moved to archive")
             file.close()
             path = 'Prediction_Raw_Files_Validated/'
-            if os.path.isdir(dest):
-                shutil.rmtree(dest)
-            file = open(r"B:\project\pythonmyproject\Prediction_Logs\GeneralLog.txt", 'a+')
+            if os.path.isdir(path + 'Bad_Raw/'):
+                shutil.rmtree(path + 'Bad_Raw/')
+            file = open("Prediction_Logs/GeneralLog.txt", 'a+')
             ob.log(file,"Bad Raw Data Folder Deleted successfully!!")
 
             file.close()
         except Exception as e:
-            file = open(r"B:\project\pythonmyproject\Prediction_Logs\GeneralLog.txt", 'a+')
+            file = open("Prediction_Logs/GeneralLog.txt", 'a+')
             ob.log(file,"Error while moving bad files to archive:: %s" % e)
 
             file.close()
@@ -252,33 +260,37 @@ class Prediction_Data_validation:
         self.deleteExistingGoodDataTrainingFolder()
         self.createDirectoryForGoodBadRawData()
         try:
-            path = (r'B:\project\pythonmyproject\Prediction_Batch_files')
-            f = open(r'B:\project\pythonmyproject\Prediction_Logs\nameValidationLog.txt', 'a+')
+            path = 'Prediction_Batch_files/'
+            f = open('Prediction_Logs/nameValidationLog.txt', 'a+')
             for i in os.listdir(path):
                 if (re.match(regex, i)):
                     splitAtDot = (re.split('.csv', i)) #if file is csv then will create regex with .csv extension else .txt will use
                     splitAtDot = (re.split('_', splitAtDot[0]))
                     if len(splitAtDot[1]) == LengthOfDateStampInFile:
                         if len(splitAtDot[2]) == LengthOfTimeStampInFile:
-                            shutil.copy((r'B:\project\pythonmyproject\Prediction_Batch_files\\' + i ), (r"B:\project\pythonmyproject\Prediction_Raw_Files_Validated\Good_Raw"))
+#                            shutil.copy((r'pythonmyproject\Prediction_Batch_files\\' + i ), (r"pythonmyproject\Prediction_Raw_Files_Validated\Good_Raw"))
+                            shutil.copy("Prediction_Batch_files/" + i, "Prediction_Raw_Files_Validated/Good_Raw")
                             ob.log(f,"Valid File name!! File moved to GoodRaw Folder :: %s" % i)
                         else:
-                            shutil.copy((r'B:\project\pythonmyproject\Prediction_Batch_Files\\' + i ), (r"B:\project\pythonmyproject\Prediction_Raw_Files_Validated\Bad_Raw"))
+#                            shutil.copy((r'pythonmyproject\Prediction_Batch_Files\\' + i ), (r"pythonmyproject\Prediction_Raw_Files_Validated\Bad_Raw"))
+                            shutil.copy("Prediction_Batch_files/" + i, "Prediction_Raw_Files_Validated/Bad_Raw")
                             ob.log(f,"Invalid File Name!! File moved to Bad Raw Folder :: %s" % i)
 
                     else:
-                        shutil.copy((r'B:\project\pythonmyproject\Prediction_Batch_Files\\' + i ), (r"B:\project\pythonmyproject\Prediction_Raw_Files_Validated\Bad_Raw"))
+                        shutil.copy("Prediction_Batch_files/" + i, "Prediction_Raw_Files_Validated/Bad_Raw")
+#                        shutil.copy((r'pythonmyproject\Prediction_Batch_Files\\' + i ), (r"pythonmyproject\Prediction_Raw_Files_Validated\Bad_Raw"))
                         ob.log(f,"Invalid File Name!! File moved to Bad Raw Folder :: %s" % i)
 
                 else:
-                    shutil.copy((r'B:\project\pythonmyproject\Prediction_Batch_Files\\' + i ), (r"B:\project\pythonmyproject\Prediction_Raw_Files_Validated\Bad_Raw"))
+                    shutil.copy("Prediction_Batch_files/" + i, "Prediction_Raw_Files_Validated/Bad_Raw")
+#                    shutil.copy((r'pythonmyproject\Prediction_Batch_Files\\' + i ), (r"pythonmyproject\Prediction_Raw_Files_Validated\Bad_Raw"))
                     ob.log(f,"Invalid File Name!! File moved to Bad Raw Folder :: %s" % i)
 
 
             f.close()
 
         except Exception as e:
-            f = open(r'B:\project\pythonmyproject\Prediction_Logs\nameValidationLog.txt', 'a+')
+            f = open('Prediction_Logs/nameValidationLog.txt', 'a+')
             ob.log(f,"Error occured while validating FileName %s" % e)
 
             f.close()
@@ -299,28 +311,28 @@ class Prediction_Data_validation:
                     On Failure: Exception
              """
         try:
-            f = open(r"B:\project\pythonmyproject\Prediction_Logs\columnValidationLog.txt", 'a+')
+            f = open("Prediction_Logs/columnValidationLog.txt", 'a+')
             ob.log(f,"Column Length Validation Started!!")
 
-            for file in os.listdir(r'B:\project\pythonmyproject\Prediction_Raw_Files_Validated\Good_Raw'):
-                csv = pd.read_csv(r'B:/project/pythonmyproject/Prediction_Raw_Files_Validated/Good_Raw/' + file)
+            for file in os.listdir('Prediction_Raw_Files_Validated/Good_Raw/'):
+                csv = pd.read_csv('Prediction_Raw_Files_Validated/Good_Raw/' + file)
                 if csv.shape[1] == NumberofColumns:
                     pass
                 else:
-                    shutil.move(r"B:/project/pythonmyproject/Prediction_Raw_Files_Validated/Good_Raw/" + file, r"B:/project/pythonmyproject/Prediction_Raw_Files_Validated/Bad_Raw")
+                    shutil.move("Prediction_Raw_Files_Validated/Good_Raw/" + file, "Prediction_Raw_Files_Validated/Bad_Raw")
                     ob.log(f,"Invalid Column Length for the file!! File moved to Bad Raw Folder :: %s" % file)
 
 
             ob.log(f,"Column Length Validation Completed!!")
 
         except OSError:
-            f = open(r"B:\project\pythonmyproject\Prediction_Logs\columnValidationLog.txt", 'a+')
+            f = open("Prediction_Logs/columnValidationLog.txt", 'a+')
             ob.log(f,"Error Occured while moving the file :: %s" % OSError)
 
             f.close()
             raise OSError
         except Exception as e:
-            f = open(r"B:\project\pythonmyproject\Prediction_Logs\columnValidationLog.txt", 'a+')
+            f = open("Prediction_Logs/columnValidationLog.txt", 'a+')
             ob.log(f,"Error Occured:: %s" % e)
 
             f.close()
@@ -343,31 +355,31 @@ class Prediction_Data_validation:
                                   On Failure: Exception
                               """
         try:
-            f = open(r'B:\project\pythonmyproject\Prediction_Logs\ValuesInColumn.txt','a+')
+            f = open('Prediction_Logs/ValuesInColumn.txt','a+')
             ob.log(f,"Missing Values Validation Started!!")
 
 
-            for file in listdir(r"B:\project\pythonmyproject\Prediction_Raw_Files_Validated\Good_Raw"):
-                csv = pd.read_csv(r"B:/project/pythonmyproject/Prediction_Raw_Files_Validated/Good_Raw/" + file)
+            for file in listdir("Prediction_Raw_Files_Validated/Good_Raw/"):
+                csv = pd.read_csv("Prediction_Raw_Files_Validated/Good_Raw/" + file)
                 count = 0
                 for columns in csv:
                     if (len(csv[columns]) - csv[columns].count()) == len(csv[columns]):
                         count+=1
-                        shutil.move(r"B:/project/pythonmyproject/Prediction_Raw_Files_Validated/Good_Raw/" + file,
-                                    r"B:/project/pythonmyproject/project/Prediction_Raw_Files_Validated/Bad_Raw")
+                        shutil.move("Prediction_Raw_Files_Validated/Good_Raw/" + file,
+                                    "Prediction_Raw_Files_Validated/Bad_Raw")
                         ob.log(f,"Invalid Column Length for the file!! File moved to Bad Raw Folder :: %s" % file)
 
                         break
                 if count==0:
-                    csv.to_csv(r"B:/project/pythonmyproject/Prediction_Raw_Files_Validated/Good_Raw/" + file, index=None, header=True)
+                    csv.to_csv("Prediction_Raw_Files_Validated/Good_Raw/" + file, index=None, header=True)
         except OSError:
-            f = open(r'B:\project\pythonmyproject\Prediction_Logs\missingValuesInColumn.txt','a+')
+            f = open('Prediction_Logs/missingValuesInColumn.txt','a+')
             ob.log(f, "Error Occured while moving the file :: %s" % OSError)
 
             f.close()
             raise OSError
         except Exception as e:
-            f = open('B:\project\pythonmyproject\Prediction_Logs\missingValuesInColumn.txt','a+')
+            f = open('Prediction_Logs/missingValuesInColumn.txt','a+')
             ob.log(f, "Error Occured:: %s" % e)
 
             f.close()

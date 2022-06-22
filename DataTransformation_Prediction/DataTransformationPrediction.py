@@ -11,7 +11,7 @@ class dataTransformPredict:
                   This class shall be used for transforming the Good Raw Training Data before loading it in Database!!.
                   """
      def __init__(self):
-          self.goodDataPath = r"B:\project\pythonmyproject\Prediction_Raw_Files_Validated\Good_Raw" # give the path
+          self.goodDataPath = "Prediction_Raw_Files_Validated/Good_Raw" # give the path
 
 
 
@@ -25,7 +25,7 @@ class dataTransformPredict:
                                                This column is anyways going to be removed during prediction.
                                           """
           try:
-               log_file = open(r'B:\project\pythonmyproject\Prediction_Logs\dataTransformLog.txt','a+')
+               log_file = open('Prediction_Logs/dataTransformLog.txt','a+')
                source = self.goodDataPath
                for file in os.listdir(source):
                     data = pandas.read_csv(self.goodDataPath + "/" + file)
@@ -39,7 +39,7 @@ class dataTransformPredict:
                log_file.close()
 
           except Exception as e:
-               log_file = open(r'B:\project\pythonmyproject\Prediction_Logs\dataTransformLog.txt','a+')
+               log_file = open('Prediction_Logs/dataTransformLog.txt','a+')
                ob.log(log_file,"Data Transformation failed because:: %s" % e)
                log_file.close()
                raise e
