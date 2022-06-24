@@ -85,8 +85,8 @@ class prediction:
                         predictions.append('>50K')
             #this line nt understood y zip is done
             final= pd.DataFrame(list(zip(predictions)),columns=['Predictions'])
-            path="Prediction_Output_File/Predictions.csv"
-            final.to_csv("Prediction_Output_File/Predictions.csv",header=True,mode='a+') #appends result to prediction file
+            path="Prediction_Output_file/Predictions.csv"
+            final.to_csv("Prediction_Output_file/Predictions.csv",header=True,mode='a+') #appends result to prediction file
             ob.log(self.file_object,'End of Prediction')
         except Exception as e: #ex
             ob.log(self.file_object, 'Error occured while running the prediction!! Error:: %s' % e)
