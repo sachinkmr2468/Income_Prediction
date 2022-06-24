@@ -6,7 +6,9 @@ import re
 import json
 import shutil
 import pandas as pd
+import sys
 from application_logging.logger import App_Logger
+from app_exception.exception import AppException
 
 dicts1 = {"SampleFileName": "incomeData_08012020_120000.csv",
 "LengthOfDateStampInFile": 9,
@@ -87,7 +89,8 @@ class Prediction_Data_validation:
             file = open('Prediction_Logs/valuesfromSchemaValidationLog.txt', 'a+')
             ob.log(file, str(e))
             file.close()
-            raise e
+#            raise e
+            raise AppException(e, sys) from e
 
         return LengthOfDateStampInFile, LengthOfTimeStampInFile, column_names, NumberofColumns
 
@@ -134,6 +137,9 @@ class Prediction_Data_validation:
 
             file.close()
             raise OSError
+        except Exception as e:
+            raise AppException(e, sys) from e
+
 
     def deleteExistingGoodDataTrainingFolder(self):
         """
@@ -163,6 +169,8 @@ class Prediction_Data_validation:
 
             file.close()
             raise OSError
+        except Exception as e:
+            raise AppException(e, sys) from e
     def deleteExistingBadDataTrainingFolder(self):
 
         """
@@ -188,6 +196,8 @@ class Prediction_Data_validation:
 
             file.close()
             raise OSError
+        except Exception as e:
+            raise AppException(e, sys) from e
 
     def moveBadFilesToArchiveBad(self):
 
@@ -241,7 +251,9 @@ class Prediction_Data_validation:
             ob.log(file,"Error while moving bad files to archive:: %s" % e)
 
             file.close()
-            raise e
+#            raise e
+#        except Exception as e:
+            raise AppException(e, sys) from e
 
 
 
@@ -294,8 +306,9 @@ class Prediction_Data_validation:
             ob.log(f,"Error occured while validating FileName %s" % e)
 
             f.close()
-            raise e
-
+#            raise e
+#        except Exception as e:
+            raise AppException(e, sys) from e
 
 
 
@@ -336,7 +349,9 @@ class Prediction_Data_validation:
             ob.log(f,"Error Occured:: %s" % e)
 
             f.close()
-            raise e
+#            raise e
+ #       except Exception as e:
+            raise AppException(e, sys) from e
 
         f.close()
 
@@ -383,7 +398,9 @@ class Prediction_Data_validation:
             ob.log(f, "Error Occured:: %s" % e)
 
             f.close()
-            raise e
+#            raise e
+#        except Exception as e:
+            raise AppException(e, sys) from e
         f.close()
 
 

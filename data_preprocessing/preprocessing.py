@@ -4,6 +4,9 @@ from sklearn_pandas import CategoricalImputer
 from sklearn.preprocessing import StandardScaler
 from imblearn.over_sampling import RandomOverSampler
 from application_logging.logger import App_Logger
+from app_exception.exception import AppException
+import sys
+import os
 ob = App_Logger()
 
 class Preprocessor:
@@ -43,7 +46,9 @@ class Preprocessor:
             ob.log(self.file_object,'unwanted space removal Unsuccessful')
 
 
-            raise Exception()
+ #           raise Exception()
+#        except Exception as e:
+            raise AppException(e, sys) from e
 
 
     def remove_columns(self,data,columns):
@@ -67,7 +72,9 @@ class Preprocessor:
             ob.log(self.file_object,'Exception occured in remove_columns' +str(e))
             ob.log(self.file_object,'Column removal Unsuccessful')
 
-            raise Exception()
+#            raise Exception()
+#        except Exception as e:
+            raise AppException(e, sys) from e
 
     def separate_label_feature(self, data, label_column_name): #label_column_name - is passed when this method is called
         """
@@ -91,7 +98,9 @@ class Preprocessor:
 #            file = ('preprocessing.txt','a+')
             ob.log(self.file_object,'Exited the separate_label_feature method of the Preprocessor class')
 
-            raise Exception()
+#            raise Exception()
+#        except Exception as e:
+            raise AppException(e, sys) from e
 
     def is_null_present(self,data):
         """
@@ -126,7 +135,9 @@ class Preprocessor:
             ob.log(self.file_object,'Exception occured in is_null_present method'+str(e))
             ob.log(self.file_object,'Finding missing values failed')
 
-            raise Exception()
+#            raise Exception()
+#        except Exception as e:
+            raise AppException(e, sys) from e
 
     def impute_missing_values(self, data, cols_with_missing_values): #cols_with_missing_values - will be passed when this method will be called
         """
@@ -152,7 +163,9 @@ class Preprocessor:
             ob.log(self.file_object,'Exception occured in impute_missing_values method' +str(e))
             ob.log(self.file_object,'Imputing missing values failed')
 
-            raise Exception()
+#            raise Exception()
+#        except Exception as e:
+            raise AppException(e, sys) from e
     def scale_numerical_columns(self,data): #Data will be passed when this method will be called
         """
                                                         Method Name: scale_numerical_columns
@@ -181,7 +194,9 @@ class Preprocessor:
             ob.log(self.file_object,'Exception occured in scale_numerical_columns method'+str(e))
             ob.log(self.file_object,'scaling for numerical columns Failed')
 
-            raise Exception()
+#            raise Exception()
+#        except Exception as e:
+            raise AppException(e, sys) from e
     def encode_categorical_columns(self,data): # data will be passed when this method will be called
         """
                                                 Method Name: encode_categorical_columns
@@ -204,7 +219,9 @@ class Preprocessor:
             ob.log(self.file_object,'Exception occured in encode_categorical_columns method' +str(e))
             ob.log(self.file_object,'encoding for categorical columns Failed')
 
-            raise Exception()
+#            raise Exception()
+#        except Exception as e:
+            raise AppException(e, sys) from e
 
     def handle_imbalanced_dataset(self,x,y): # x, y will be passed when this method will be called
         """
@@ -226,4 +243,6 @@ class Preprocessor:
             ob.log(self.file_object,'Exception occured in handle_imbalanced_dataset method of the Preprocessor class'+ str(e))
             ob.log(self.file_object,'dataset balancing Failed.')
 
-            raise Exception()
+#            raise Exception()
+#        except Exception as e:
+            raise AppException(e, sys) from e

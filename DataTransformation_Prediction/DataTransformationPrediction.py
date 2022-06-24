@@ -2,6 +2,9 @@ from datetime import datetime
 from os import listdir #needs to write the code in my way
 import pandas
 from application_logging.logger import App_Logger
+import sys
+import os
+from app_exception.exception import AppException
 
 ob = App_Logger()
 import os
@@ -42,5 +45,8 @@ class dataTransformPredict:
                log_file = open('Prediction_Logs/dataTransformLog.txt','a+')
                ob.log(log_file,"Data Transformation failed because:: %s" % e)
                log_file.close()
-               raise e
+
+#               raise e
+#          except Exception as e:
+               raise AppException(e, sys) from e
 

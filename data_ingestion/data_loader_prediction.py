@@ -1,5 +1,8 @@
 import pandas as pd
 from application_logging.logger import App_Logger
+from app_exception.exception import AppException
+import os
+import sys
 ob = App_Logger()
 
 class Data_Getter_Pred:
@@ -30,6 +33,7 @@ class Data_Getter_Pred:
                    'Exception occured in get_data method of the Data_Getter class. Exception message: ' + str(e))
             ob.log(self.file_object,
                    'Data Load Unsuccessful.Exited the get_data method of the Data_Getter class')
-            raise Exception()
-
+#            raise Exception()
+#        except Exception as e:
+            raise AppException(e, sys) from e
 

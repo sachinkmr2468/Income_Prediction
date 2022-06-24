@@ -128,3 +128,6 @@
 2022-06-22/13:17:52		Invalid File Name!! File moved to Bad Raw Folder :: incomeData_021119.csv
 2022-06-22/13:17:52		Valid File name!! File moved to GoodRaw Folder :: incomeData_021119910_010212.csv
 2022-06-22/13:17:52		Valid File name!! File moved to GoodRaw Folder :: incomeData_021119911_010213.csv
+2022-06-24/13:32:35		Invalid File Name!! File moved to Bad Raw Folder :: incomeData_021119.csv
+2022-06-24/13:32:35		Valid File name!! File moved to GoodRaw Folder :: incomeData_021119910_010212.csv
+2022-06-24/13:32:36		Valid File name!! File moved to GoodRaw Folder :: incomeData_021119911_010213.csv

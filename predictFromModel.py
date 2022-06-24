@@ -3,6 +3,9 @@ import numpy as np
 from file_operations import file_methods
 from data_preprocessing import preprocessing
 from data_ingestion import data_loader_prediction
+from app_exception.exception import AppException
+import os
+import sys
 
 from Prediction_Raw_Data_Validation.predictionDataValidation import Prediction_Data_validation
 from application_logging.logger import App_Logger
@@ -85,9 +88,11 @@ class prediction:
             path="Prediction_Output_File/Predictions.csv"
             final.to_csv("Prediction_Output_File/Predictions.csv",header=True,mode='a+') #appends result to prediction file
             ob.log(self.file_object,'End of Prediction')
-        except Exception as ex:
-            ob.log(self.file_object, 'Error occured while running the prediction!! Error:: %s' % ex)
-            raise ex
+        except Exception as e: #ex
+            ob.log(self.file_object, 'Error occured while running the prediction!! Error:: %s' % e)
+#            raise ex
+#        except Exception as e:
+            raise AppException(e, sys) from e
         return path
 
 

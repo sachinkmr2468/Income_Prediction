@@ -3,6 +3,9 @@ from Prediction_Raw_Data_Validation.predictionDataValidation import Prediction_D
 from DataTypeValidation_Insertion_Prediction.DataTypeValidationPrediction import dbOperation
 from DataTransformation_Prediction.DataTransformationPrediction import dataTransformPredict
 from application_logging.logger import App_Logger
+from app_exception.exception import AppException
+import os
+import sys
 ob = App_Logger()
 
 class pred_validation:
@@ -76,7 +79,9 @@ class pred_validation:
             self.file_object.close()
 
         except Exception as e:
-            raise e
+#            raise e
+#        except Exception as e:
+            raise AppException(e, sys) from e
 
 
 

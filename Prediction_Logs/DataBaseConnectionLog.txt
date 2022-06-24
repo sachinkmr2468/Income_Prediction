@@ -173,3 +173,10 @@
 2022-06-22/13:18:29		data loaded successfully!!
 2022-06-22/13:18:42		connection was successful
 2022-06-22/13:18:43		data loaded to csv successfully!!
+2022-06-24/13:32:51		connection was successful
+2022-06-24/13:32:51		Tables created successfully!!
+2022-06-24/13:33:04		connection was successful
+2022-06-24/13:33:09		data loaded successfully!!
+2022-06-24/13:33:13		data loaded successfully!!
+2022-06-24/13:33:25		connection was successful
+2022-06-24/13:33:26		data loaded to csv successfully!!

@@ -2,6 +2,8 @@ import pickle
 import os
 import shutil
 from application_logging.logger import App_Logger
+from app_exception.exception import AppException
+import sys
 
 ob = App_Logger()
 
@@ -39,7 +41,9 @@ class File_Operation:
             ob.log(self.file_object,'Exception occured in save_model method of the Model_Finder class,  Exception message'+str(e))
             ob.log(self.file_object,'Model File '+filename+' could not be saved. Exited the save_model method of the Model_Finder class')
 
-            raise Exception()
+#            raise Exception()
+#        except Exception as e:
+            raise AppException(e, sys) from e
 
     def load_model(self,filename): # file name will be passed when this method is called
         """
@@ -62,7 +66,9 @@ class File_Operation:
                                        e))
             ob.log(self.file_object,
                                    'Model File ' + filename + ' could not be saved. Exited the load_model method of the Model_Finder class')
-            raise Exception()
+#            raise Exception()
+#        except Exception as e:
+            raise AppException(e, sys) from e
 
     def find_correct_model_file(self, cluster_number):
         """
@@ -95,3 +101,5 @@ class File_Operation:
                                        e))
             ob.log(self.file_object,
                                    'Exited the find_correct_model_file method of the Model_Finder class with Failure')
+#        except Exception as e:
+            raise AppException(e, sys) from e
