@@ -357,8 +357,8 @@ class Prediction_Data_validation:
 
     def deletePredictionFile(self):
 
-        if os.path.exists('Prediction_Output_File/Predictions.csv'):
-            os.remove('Prediction_Output_File/Predictions.csv')
+        if os.path.exists('Prediction_Output_file/Predictions.csv'):
+            os.remove('Prediction_Output_file/Predictions.csv')
 
     def validateMissingValuesInWholeColumn(self):
         """
